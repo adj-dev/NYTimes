@@ -2,62 +2,61 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>NY Times Search</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <link rel="stylesheet" href="assets/style.css" type="text/css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NY Times Search</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/style.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
 
-  <div class="container">
-    <div class="jumbotron">
 
-      <h1 class="text-center">New York Times Search</h1>
+<div class="container">
+    <div class="jumbotron bg-primary">
+        <h1 class="text-center"><i id="newspaper" class="fas fa-newspaper"></i>New York Times Search</h1>
     </div>
     <div class="card">
-
-      <h5 class="card-header">Search Parameters</h5>
-      <div class="card-body">
-        <form>
-          <div class="form-group">
-            <label>Search Term</label>
-            <input type="text" class="form-control" id="search-term">
-          </div>
-          <div class="form-group">
-            <label>Number of Records to Retrieve</label>
-            <select class="form-control" id="num-records">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Start Year (Optional)</label>
-            <input type="number" class="form-control" id="start-year" min="0" max="2019">
-          </div>
-          <div class="form-group">
-            <label>End Year (Optional)</label>
-            <input type="number" class="form-control" id="end-year" min="0" max="2019">
-          </div>
-          <div class="row">
-            <a href="#"><span class="glyphicon glyphicon-search"></span>Search</a>
-            <a href="#"><span class="glyphicon glyphicon-trash"></span>Clear Results</a>
-          </div>
-        </form>
-      </div>
-      <div class="card">
+        <h5 class="card-header">Search Parameters</h5>
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <label>Search Term</label>
+                    <input type="text" class="form-control" id="search-term">
+                </div>
+                <div class="form-group">
+                    <label>Number of Records to Retrieve</label>
+                    <select class="form-control" id="num-records">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Start Year (Optional)</label>
+                    <input type="number" class="form-control" id="start-year" min="0" max="2019">
+                </div>
+                <div class="form-group">
+                    <label>End Year (Optional)</label>
+                    <input type="number" class="form-control" id="end-year" min="0" max="2019">
+                </div>
+                <div class="row">
+                    <i id="search-btn" class="fas fa-search">Search</i>
+                    <i id="clear-btn" class="fas fa-trash">Clear Results</i>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="results" class="card">
         <h5 class="card-header">Top Articles</h5>
-      </div>
-      <div class="row">
-
-      </div>
+    </div>
+    <div id="articles" class="row">
     </div>
 
 
